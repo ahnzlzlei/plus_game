@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #f0f2f5;
+    background-color: #FFE5F1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,7 +20,7 @@ body {
     aspect-ratio: 9/16;
     background: white;
     border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(255, 182, 193, 0.2);
     overflow: hidden;
     position: relative;
 }
