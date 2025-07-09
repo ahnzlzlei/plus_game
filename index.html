@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧮 쁘띠꾸아 남천점 더하기 게임 🧮</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <!-- 시작 화면 -->
+        <div id="start-screen" class="screen active">
+            <h1>🧮 쁘띠꾸아 남천점 더하기 게임 🧮</h1>
+            <div class="instructions">
+                <p>👉 5초 안에 문제를 풀고 정답을 입력하세요!</p>
+                <p>3문제 연속 정답 시 음료수 쿠폰이 지급됩니다!</p>
+                <p>준비되면 시작 버튼을 눌러주세요!</p>
+            </div>
+            <button id="start-button" class="btn">시작하기 ▶️</button>
+        </div>
+
+        <!-- 게임 화면 -->
+        <div id="game-screen" class="screen">
+            <div class="status-bar">
+                <div class="timer-container">
+                    <div id="timer-bar"></div>
+                </div>
+                <div id="score">연속 정답: 0/3</div>
+            </div>
+            <div class="problem-container">
+                <div id="problem">23 + 17 = ?</div>
+            </div>
+            <div class="input-container">
+                <input type="number" id="answer-input" placeholder="답을 입력하세요">
+                <button id="submit-button" class="btn">확인</button>
+            </div>
+        </div>
+
+        <!-- 결과 화면 -->
+        <div id="result-screen" class="screen">
+            <h2 id="result-message"></h2>
+            <div class="button-container">
+                <button id="retry-button" class="btn">다시 하기 🔁</button>
+                <button id="home-button" class="btn">홈으로 🏠</button>
+            </div>
+        </div>
+
+        <!-- 쿠폰 화면 -->
+        <div id="coupon-screen" class="screen">
+            <h2>🎉 축하합니다! 3000원 할인쿠폰이 지급됩니다!</h2>
+            <div id="coupon-container">
+                <canvas id="coupon-canvas"></canvas>
+            </div>
+            <div class="button-container">
+                <button id="save-coupon" class="btn">쿠폰 저장하기 💾</button>
+                <button id="coupon-home" class="btn">홈으로 🏠</button>
+            </div>
+        </div>
+    </div>
+
+    <img id="fail-image" src="assets/ggg.png" style="display: none;">
+    <script src="script.js"></script>
+</body>
+</html> 
